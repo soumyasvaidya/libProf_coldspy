@@ -1,0 +1,2 @@
+ocrmypdf==14.4.0
+importlib-resources
