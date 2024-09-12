@@ -1,0 +1,29 @@
+# Use the AWS Lambda Python 3.9 base image
+FROM public.ecr.aws/lambda/python:3.9
+
+RUN echo "started"
+
+# Copy the local dependencies into the current directory of the container
+#COPY package ./package
+#RUN echo "package copied"
+
+# Copy the handler file into the current directory of the container
+#COPY handler.py ./handler.py
+COPY ./package ${LAMBDA_TASK_ROOT}/package
+COPY ./handler.py ${LAMBDA_TASK_ROOT}/
+
+# Set the Python path to include the copied packages
+ENV PYTHONPATH=${LAMBDA_TASK_ROOT}/package
+
+# install our dependencies
+#RUN python3 -m pip install -r requirements.txt --target ${LAMBDA_TASK_ROOT}
+
+# Set the CMD to your handler (could also be done as a parameter override outside of the Dockerfile)
+CMD [ "handler.handler" ]
+#ENV PYTHONPATH="./package:${PYTHONPATH}"
+
+# Install the dependencies (uncomment this line if you have a requirements.txt)
+# RUN pip install --no-index --find-links=./package -r ./requirements.txt
+
+# Use CMD to specify the Lambda handler (module_name.function_name)
+#CMD ["handler.handler"]

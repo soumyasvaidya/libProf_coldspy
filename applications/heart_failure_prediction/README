@@ -1,0 +1,40 @@
+- Application Name: Heart Failure Prediction
+- Application source code: https://www.kaggle.com/code/nayansakhiya/heart-fail-analysis-and-quick-prediction
+
+Optimization: Lazy loading libraries
+
+1. `make invoke INVOKE_COUNT=600` will run 600 cold starts in concurrently
+
+## 600+ Cold Starts
+## Initialization:
+![](init.png)
+
+## Execution:
+![](exec.png)
+
+## End-to-end:
+![](e2e.png)
+
+2. Analysis:
+
+## Initialization Time
+Average of init_before is : 3440.8889293849666
+
+Average of init_after is : 2479.8532199546485
+
+Percent difference is : -27.92986722771363
+
+## End to End Time
+Average of e2e_before is : 3443.6605239179958
+
+Average of e2e_after is : 2648.281882086168
+
+Percent difference is : -23.09689460698909
+
+## Memory Utilization
+
+Average of Max Memory used before is : 189.32801822323464
+
+Average of Max Memory used after is : 162.7687074829932
+
+Percent difference is : -14.02819877875954

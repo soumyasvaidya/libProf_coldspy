@@ -1,0 +1,40 @@
+- Application Name: Sensor Telemtry Data
+- Application source code: https://www.kaggle.com/code/rjconstable/environmental-sensor-telemetry-dataset
+
+Optimization: Lazy loading libraries
+
+1. `make invoke INVOKE_COUNT=600` will run 600 cold starts in concurrently
+
+## 600+ Cold Starts
+## Initialization:
+![](init.png)
+
+## Execution:
+![](exec.png)
+
+## End-to-end:
+![](e2e.png)
+
+2. Analysis:
+
+## Initialization Time
+Average of init_before is : 2002.0171290322583
+
+Average of init_after is : 1002.545575868373
+
+Percent difference is : -49.92322686304952
+
+## End to End Time
+Average of e2e_before is : 2297.607822580645
+
+Average of e2e_after is : 2098.6352833638025
+
+Percent difference is : -8.659987020472405
+
+## Memory Utilization
+
+Average of Max Memory used before is : 165.84193548387097
+
+Average of Max Memory used after is : 160.7349177330896
+
+Percent difference is : -3.0794489559476146
